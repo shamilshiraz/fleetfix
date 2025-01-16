@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body[dir='rtl'] {
+  text-align: right;
+  direction: rtl;
+}
+
+body[dir='ltr'] {
+  text-align: left;
+  direction: ltr;
+}
+
+@font-face {
+  font-family: 'beb';
+  src: url('./font/BebasNeue-Regular.otf');
+}
