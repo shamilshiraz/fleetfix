@@ -14,7 +14,7 @@ export default function Intro() {
         <div className='h-screen  overflow-hidden'>
             <motion.div style={{ y }} className='relative h-full '>
                 <img 
-                    src={'./truck.avif'} 
+                    src={'./truck.jpg'} 
                     alt="image" 
                     className="absolute inset-0 h-full w-full object-cover" 
                 />

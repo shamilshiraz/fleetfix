@@ -7,6 +7,11 @@ import Intro from './Components/Intro'
 import About from './Components/About'
 import Section from './Components/Section'
 import ResponsiveCardSlider from './Components/Triple'
+import Display from './Components/Display'
+import Contact from './Components/Contact'
+import ProductGrid from './Components/ProductGrid'
+
+
 function App() {
   return (
     <div>
@@ -14,8 +19,9 @@ function App() {
       <Intro/>
       <About/>
       <Section/>
-      <ResponsiveCardSlider/>
-      {/* <Home/> */}
+      <Display/>
+      <ProductGrid/>
+      <Contact/>
       {/* <Footer/> */}
     </div>
   )

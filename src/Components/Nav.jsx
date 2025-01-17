@@ -17,7 +17,7 @@ const Nav = () => {
   }, [i18n.language]);
 
   return (
-    <nav className="p-4 bg-opacity-50 fixed top-0 z-20 w-full bg-black text-white flex justify-between items-center h-[15vh] font-beb text-4xl">
+    <nav className="p-4  fixed top-0 z-20 w-full bg-black text-white flex justify-between items-center h-[15vh] font-beb text-4xl">
       <div>
         <img src="ffwhite.png" className="h-[10vh]" alt="logo" />
       </div>
