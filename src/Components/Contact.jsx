@@ -6,7 +6,7 @@ import { PhoneCall } from 'lucide-react';
 
 function Contact() {
   return (
-    <div className='flex font-beb flex-col justify-center items-center pt-[20vh]'>
+    <div className='flex font-beb flex-col justify-center items-center pt-[10vh] bg-gray-100'>
       <div className="text-7xl">CONTACT <span className='text-red-600'>US</span></div>
       <div className="h-[50vh] w-[90vw] py-5">
         <iframe

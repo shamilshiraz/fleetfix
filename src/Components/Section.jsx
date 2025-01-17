@@ -1,7 +1,10 @@
 import React, { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Section() {
+        const { t } = useTranslation();
+    
     const container = useRef();
     const { scrollYProgress } = useScroll({
         target: container,
@@ -19,8 +22,8 @@ export default function Section() {
             <div className="absolute flex items-center justify-center w-[80vw] h-[70vh] z-10">
                 <div className="bg-white h-full w-full p-6 rounded-md shadow-lg font-beb grid place-content-center text-center">
                     {/* Your content goes here */}
-                    <p className='text-6xl'>our <span className='text-red-600'>Mission</span></p>
-                    <p className='text-3xl py-5'> Our mission is to ensure your trucks stay operational and efficient with reliable and durable spare parts. Our knowledgeable team is always ready to assist you in finding the right parts to your requirements.</p>
+                    <p className='text-6xl'>{t('mission.h1')} <span className='text-red-600'>{t('mission.h2')}</span></p>
+                    <p className='text-3xl py-5'> {t('mission.para')}</p>
 
                 </div>
             </div>

@@ -3,8 +3,8 @@ import { ChevronDown } from 'lucide-react';
 
 // Sample data structure
 const CATEGORIES = [
-  "Electronics", "Clothing", "Home & Garden", "Books", 
-  "Sports", "Beauty", "Toys", "Food", "Accessories"
+  "Engine", "Transmission", "Brake", "Suspension", 
+  "Electrical", "Wheels and tyres", "Cooling system", "Fuel system", "Exhaust system","Steering","Air and Hydraulic"
 ];
 
 const PRODUCTS = Array.from({ length: 50 }, (_, i) => ({

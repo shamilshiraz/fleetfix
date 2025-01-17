@@ -18,6 +18,11 @@ const resources = {
         us:'us',
         para:"Fleets Fix, based in Saudi Arabia, is a trusted supplier of high-quality truck spare parts. We specialize in providing a comprehensive range of components for commercial vehicles, catering to the needs of businesses and fleet operators across the region. We source our products from reputable manufacturers to guarantee quality and performance. Whether you're looking for engine components, brake systems, suspension parts, or any other truck essentials, Fleets Fix is your one-stop destination."
       },
+      mission: {
+        h1: "Our",
+        h2:'mission',
+        para:'Our mission is to ensure your trucks stay operational and efficient with reliable and durable spare parts. Our knowledgeable team is always ready to assist you in finding the right parts to your requirements.'
+      },
       footer: {
         text: "This is the footer",
       },
@@ -32,9 +37,14 @@ const resources = {
         contact:'اتصال'
       },
       about: {
-        ab: "مرحبًا بكم في الصفحة الرئيسية",
-        us:'',
-        para:''
+        ab: "من",
+        us:'نحن',
+        para:'تعد شركة Fleets Fix، التي يقع مقرها في المملكة العربية السعودية، موردًا موثوقًا لقطع غيار الشاحنات عالية الجودة. نحن متخصصون في توفير مجموعة شاملة من مكونات المركبات التجارية، لتلبية احتياجات الشركات ومشغلي الأساطيل في جميع أنحاء المنطقة. نحن نستورد منتجاتنا من الشركات المصنعة ذات السمعة الطيبة لضمان الجودة والأداء. سواء كنت تبحث عن مكونات المحرك، أو أنظمة الفرامل، أو أجزاء التعليق، أو أي أساسيات أخرى للشاحنة، فإن Fleets Fix هي وجهتك الوحيدة.'
+      },
+      mission: {
+        h1: "مهمتنا",
+        h2:'',
+        para:'مهمتنا هي ضمان بقاء شاحناتك عاملة وفعالة من خلال قطع الغيار الموثوقة والمتينة. فريقنا ذو المعرفة جاهز دائمًا لمساعدتك في العثور على الأجزاء المناسبة لمتطلباتك.'
       },
       footer: {
         text: "هذا هو التذييل",

@@ -10,6 +10,7 @@ import ResponsiveCardSlider from './Components/Triple'
 import Display from './Components/Display'
 import Contact from './Components/Contact'
 import ProductGrid from './Components/ProductGrid'
+import Branches from './Components/Branches'
 
 
 function App() {
@@ -20,9 +21,10 @@ function App() {
       <About/>
       <Section/>
       <Display/>
+      <Branches/>
       <ProductGrid/>
       <Contact/>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   )
 }
