@@ -25,11 +25,11 @@ const Nav = () => {
       {/* Desktop Navigation */}
       <div className="hidden lg:flex py-3">
         <ul className="flex gap-6">
-          <li><a href="/">{t('nav.about')}</a></li>
-          <li><a href="/about">{t('nav.products')}</a></li>
-          <li><a href="">{t('nav.branches')}</a></li>
+          <li><a href="#about">{t('nav.about')}</a></li>
+          <li><a href="#products">{t('nav.products')}</a></li>
+          <li><a href="#branches">{t('nav.branches')}</a></li>
           <li><a href="/col">{t('nav.brochure')}</a></li>
-          <li><a href="">{t('nav.contact')}</a></li>
+          <li><a href="#contact">{t('nav.contact')}</a></li>
         </ul>
       </div>
 
