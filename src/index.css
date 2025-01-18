@@ -2,16 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* RTL Direction */
 body[dir='rtl'] {
   text-align: right;
   direction: rtl;
+  font-family: 'jan', sans-serif; /* Apply Arabic font when the direction is RTL */
 }
 
+/* LTR Direction */
 body[dir='ltr'] {
   text-align: left;
   direction: ltr;
+  font-family: 'beb', sans-serif; /* Apply default font when the direction is LTR */
 }
 
+/* Font Faces */
 @font-face {
   font-family: 'beb';
   src: url('./font/BebasNeue-Regular.otf');
@@ -20,4 +25,9 @@ body[dir='ltr'] {
 @font-face {
   font-family: 'hik';
   src: url('./font/HikouRegular.otf');
+}
+
+@font-face {
+  font-family: 'jan';
+  src: url('./font/janna.ttf');
 }

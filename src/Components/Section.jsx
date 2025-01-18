@@ -20,7 +20,7 @@ export default function Section() {
         >
             {/* Centered div with 70% width and height on top of the image */}
             <div className="absolute flex items-center justify-center w-[80vw] h-[70vh] z-10">
-                <div className="bg-white h-full w-full p-6 rounded-md shadow-lg font-beb grid place-content-center text-center">
+                <div className="bg-white h-full w-full p-6 rounded-md shadow-lg  grid place-content-center text-center">
                     {/* Your content goes here */}
                     <p className='text-6xl'
                     data-aos="fade-up"

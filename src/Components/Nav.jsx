@@ -10,10 +10,26 @@ const Nav = () => {
     const selectedLanguage = event.target.value;
     i18n.changeLanguage(selectedLanguage);
     document.body.dir = selectedLanguage === 'ar' ? 'rtl' : 'ltr';
+    // Apply the correct font globally based on language
+    if (selectedLanguage === 'ar') {
+      document.body.classList.add('font-jan');
+      document.body.classList.remove('font-hik', 'font-beb');
+    } else if (selectedLanguage === 'en') {
+      document.body.classList.add('font-hik'); // Or 'font-beb' based on your default
+      document.body.classList.remove('font-jan');
+    }
   };
 
   useEffect(() => {
     document.body.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+    // Apply the font on initial load
+    if (i18n.language === 'ar') {
+      document.body.classList.add('font-jan');
+      document.body.classList.remove('font-hik', 'font-beb');
+    } else {
+      document.body.classList.add('font-beb'); // Or 'font-beb'
+      document.body.classList.remove('font-jan');
+    }
   }, [i18n.language]);
 
   const handleScroll = (targetId) => {
@@ -41,14 +57,14 @@ const Nav = () => {
 
   return (
     <nav 
-    style={{
-      transitionDuration:'0.3s',
-      transition:'ease-in',
-      background: isScrolled 
-      ? 'black' 
-      : 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)'
-    }}
-    className="p-4 fixed top-0 z-20 w-full text-white flex justify-between items-center h-[20vh] font-hik text-4xl">
+      style={{
+        transitionDuration: '0.3s',
+        transition: 'ease-in',
+        background: isScrolled 
+          ? 'black' 
+          : 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)'
+      }}
+      className="p-4 fixed top-0 z-20 w-full text-white flex justify-between items-center h-[20vh] font-hik text-4xl">
       <div>
         <img src="ffwhite.png" className="h-[13vh]" alt="logo" />
       </div>
@@ -110,6 +126,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-
-

@@ -7,7 +7,7 @@ function About() {
   
   return (
     <div id='about' className='h-[] py-5 w-full grid place-content-center'>
-<div className="font-beb sm:p-40  px-4 flex flex-col justify-center items-center">
+<div className=" sm:p-40  px-4 flex flex-col justify-center items-center">
     <p data-aos="fade-up" className='text-8xl'>{t('about.ab')} <span className='text-red-600'>{t('about.us')} </span> </p>
     <p data-aos="fade-up"
     data-aos-duration="1600"
