@@ -5,7 +5,7 @@ export default function Intro() {
     const [currentImage, setCurrentImage] = useState(0);
     const [currentText, setCurrentText] = useState(0);
     const images = ['./truck.jpg', 'truck2.webp', 'truck3.jpg'];
-    const text1 = ['Fleet', 'Spare'];
+    const text1 = ['Fleets', 'Spare'];
     const text2 = ['fix', 'Parts'];
     const container = useRef();
     const { scrollYProgress } = useScroll({

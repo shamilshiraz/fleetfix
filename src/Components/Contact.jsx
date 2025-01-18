@@ -68,13 +68,13 @@ function Contact() {
         <div  className="flex-1 p-6 rblackg text-2xl">
           <p>Connect with us through</p>
           <div className="border border-black p-2 my-4">
-            <a href="" className='flex'><FaWhatsapp className='mr-3' />Contact us via WhatsApp</a>
+            <a href="https://wa.me/966571348034?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20spare%20parts" className='flex'><FaWhatsapp className='mr-3' />Contact us via WhatsApp</a>
           </div>
           <div className="border border-black p-2 my-4">
-            <a href="" className='flex'><CiMail className='mr-3' />Contact us via Mail</a>
+            <a href="mailto:sales@fleetsfix.com?subject=I%20would%20like%20to%20enquire%20about%20spare%20parts&body=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20spare%20parts." className='flex'><CiMail className='mr-3' />Contact us via Mail</a>
           </div>
           <div className="border border-black p-2">
-            <a href="" className='flex'><PhoneCall className='mr-3' />Ring us</a>
+            <a href="tel:+966571348034" className='flex'><PhoneCall className='mr-3' />Ring us</a>
           </div>
           <p className='py-10 text-gray-500'>At FleetFix, we’re dedicated to keeping your fleet running smoothly, ensuring your business stays on track with reliable maintenance and repair services.</p>
         </div>
