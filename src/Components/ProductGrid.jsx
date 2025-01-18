@@ -1,49 +1,47 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
- 
+import { t } from 'i18next';
+
+
 
 // Sample data structure
 const CATEGORIES = [
-  "Engine", "Transmission", "Brake", "Suspension", 
-  "Electrical","Body", "Wheels and tyres",
+  t('products.engine'), t('products.transmission'), t('products.brake'), t('products.suspension'), 
+  t('products.electrical'),t('products.body'), t('products.wheels'),
   //  "Cooling system", "Fuel system", "Exhaust system","Steering","Air and Hydraulic"
 ];
 
 const PRODUCTS = [
-  { id: 1, name: "Pistons", category: "Engine", image: './piston.png' },
-  { id: 2, name: "Cylinders", category: "Engine", image: './cylinder.png' },
-  { id: 3, name: "Crankshafts", category: "Engine", image: './crankshaft.png' },
-  { id: 4, name: "Camshafts", category: "Engine", image: './camshaft.png' },
-  { id: 5, name: "Valves", category: "Engine", image: './valve.png' },
-  { id: 6, name: "Gears", category: "Transmission", image: './transmission.png' },
-  { id: 7, name: "Bearings", category: "Transmission", image: './bearing.png' },
-  { id: 8, name: "Seals", category: "Transmission", image: './seal.png' },
-  { id: 9, name: "Clutches", category: "Transmission", image: './clutch.png' },
-  { id: 10, name: "Pads", category: "Brake", image: './pads.png' },
-  { id: 11, name: "Rotors", category: "Brake", image: './rotors.png' },
-  { id: 12, name: "Calipers", category: "Brake", image: './caliper.png' },
-  { id: 13, name: "Brake shoes", category: "Brake", image: './shoes.png' },
-  { id: 14, name: "Shocks", category: "Suspension", image: './shocks.png' },
-  { id: 15, name: "Struts", category: "Suspension", image: './struts.png' },
-  { id: 16, name: "Springs", category: "Suspension", image: './spring.png' },
-  { id: 17, name: "Bushings", category: "Suspension", image: './bush.png' },
-  { id: 18, name: "Batteries", category: "Electrical", image: './battery.png' },
-  { id: 19, name: "Alternators", category: "Electrical", image: './electric.png' },
-  { id: 20, name: "Starters", category: "Electrical", image: './starter.png' },
-  { id: 21, name: "Fuses", category: "Electrical", image: './fuse.png' },
-  { id: 22, name: "Bumpers", category: "Body", image: './bodyparts.png' },
-  { id: 23, name: "Fenders", category: "Body", image: './fenders.png' },
-  { id: 24, name: "Doors", category: "Body", image: './doors.png' },
-  { id: 25, name: "Mirrors", category: "Body", image: './mirrors.png' },
-  { id: 26, name: "Rims", category: "Wheels and tyres", image: './rims.png' },
-  { id: 27, name: "Tires", category: "Wheels and tyres", image: './tyres.png' },
-  { id: 28, name: "Hubs", category: "Wheels and tyres", image: './hubs.png' },
-  { id: 29, name: "Bearings", category: "Wheels and tyres", image: './bearings.png' },
-
-
-
-
-]
+  { id: 1, name: t('grid.piston'), category: t('products.engine'), image: './piston.png' },
+  { id: 2, name: t('grid.cylinder'), category: t('products.engine'), image: './cylinder.png' },
+  { id: 3, name: t('grid.crankshaft'), category: t('products.engine'), image: './crankshaft.png' },
+  { id: 4, name: t('grid.camshaft'), category: t('products.engine'), image: './camshaft.png' },
+  { id: 5, name: t('grid.valve'), category: t('products.engine'), image: './valve.png' },
+  { id: 6, name: t('grid.gear'), category: t('products.transmission'), image: './transmission.png' },
+  { id: 7, name: t('grid.bearing'), category: t('products.transmission'), image: './bearing.png' },
+  { id: 8, name: t('grid.seal'), category: t('products.transmission'), image: './seal.png' },
+  { id: 9, name: t('grid.clutch'), category: t('products.transmission'), image: './clutch.png' },
+  { id: 10, name: t('grid.pad'), category: t('products.brake'), image: './pads.png' },
+  { id: 11, name: t('grid.rotor'), category: t('products.brake'), image: './rotors.png' },
+  { id: 12, name: t('grid.caliper'), category: t('products.brake'), image: './caliper.png' },
+  { id: 13, name: t('grid.brakeshoe'), category: t('products.brake'), image: './shoes.png' },
+  { id: 14, name: t('grid.shock'), category: t('products.suspension'), image: './shocks.png' },
+  { id: 15, name: t('grid.strut'), category: t('products.suspension'), image: './struts.png' },
+  { id: 16, name: t('grid.spring'), category: t('products.suspension'), image: './spring.png' },
+  { id: 17, name: t('grid.bushing'), category: t('products.suspension'), image: './bush.png' },
+  { id: 18, name: t('grid.battery'), category: t('products.electrical'), image: './battery.png' },
+  { id: 19, name: t('grid.alternator'), category: t('products.electrical'), image: './electric.png' },
+  { id: 20, name: t('grid.starter'), category: t('products.electrical'), image: './starter.png' },
+  { id: 21, name: t('grid.fuse'), category: t('products.electrical'), image: './fuse.png' },
+  { id: 22, name: t('grid.bumper'), category: t('products.body'), image: '.t(bodyparts.png' },
+  { id: 23, name: t('grid.fender'), category: t('products.body'), image: './fenders.png' },
+  { id: 24, name: t('grid.door'), category: t('products.body'), image: './doors.png' },
+  { id: 25, name: t('grid.mirror'), category: t('products.body'), image: './mirrors.png' },
+  { id: 26, name: t('grid.rim'), category: t('products.wheels'), image: './rims.png' },
+  { id: 27, name: t('grid.tire'), category: t('products.wheels'), image: './tyres.png' },
+  { id: 28, name: t('grid.hub'), category: t('products.wheels'), image: './hubs.png' },
+  { id: 29, name: t('grid.bearing_wheels'), category: t('products.wheels'), image: './bearings.png' },
+];
 
 const ProductGrid = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -75,7 +73,7 @@ const ProductGrid = () => {
     <div 
     data-aos="fade-up"
     data-aos-duration="1600"
-    className="container mx-auto px-4 py-8 font-beb">
+    className="container mx-auto px-4 py-8 ">
       {/* Category Filter */}
       <div className="mb-8 flex justify-center">
   <div className="relative w-64">
@@ -84,7 +82,7 @@ const ProductGrid = () => {
       value={selectedCategory}
       onChange={(e) => setSelectedCategory(e.target.value)}
     >
-      <option value="All">All Categories</option>
+      <option value="All">{t('grid.all')}</option>
       {CATEGORIES.map(category => (
         <option key={category} value={category}>
           {category}
