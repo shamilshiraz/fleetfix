@@ -63,8 +63,8 @@ export default function Intro() {
                                 className="m-3"
                             >
                                 <p className="text-7xl sm:text-8xl font-bold text-white">
-                                    {text1[currentText]} <br className='sm:hidden'/> 
-                                    <span className='text-red-600'>{text2[currentText]}</span>
+                                    {text1[currentText]}  
+                                    <span className='text-red-600'> {text2[currentText]}</span>
                                 </p>
                             </motion.div>
                         </AnimatePresence>
