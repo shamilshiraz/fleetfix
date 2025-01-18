@@ -26,8 +26,29 @@ const Nav = () => {
     }
   };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const isScrolled = scrollPosition > 50;
+
   return (
-    <nav className="p-4 fixed top-0 z-20 w-full bg-black text-white flex justify-between items-center h-[20vh] font-hik text-4xl">
+    <nav 
+    style={{
+      transitionDuration:'0.3s',
+      transition:'ease-in',
+      background: isScrolled 
+      ? 'black' 
+      : 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)'
+    }}
+    className="p-4 fixed top-0 z-20 w-full text-white flex justify-between items-center h-[20vh] font-hik text-4xl">
       <div>
         <img src="ffwhite.png" className="h-[13vh]" alt="logo" />
       </div>
