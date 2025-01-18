@@ -17,13 +17,13 @@ const Nav = () => {
   }, [i18n.language]);
 
   return (
-    <nav className="p-4  fixed top-0 z-20 w-full bg-black text-white flex justify-between items-center h-[15vh] font-beb text-4xl">
+    <nav className="p-4  fixed top-0 z-20 w-full bg-black text-white flex justify-between items-center h-[20vh] font-beb text-4xl">
       <div>
-        <img src="ffwhite.png" className="h-[10vh]" alt="logo" />
+        <img src="ffwhite.png" className="h-[13vh]" alt="logo" />
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden lg:flex py-3">
+      <div className="hidden lg:flex py-3 text-xl">
         <ul className="flex gap-6">
           <li><a href="#about">{t('nav.about')}</a></li>
           <li><a href="#products">{t('nav.products')}</a></li>
