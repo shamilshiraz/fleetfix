@@ -123,16 +123,16 @@ const ProductGrid = () => {
             onClick={handleSeeMore}
             className="border border-black text-black bg-white px-6 py-2 hover:text-white  hover:bg-red-600 transition-colors"
           >
-            See More 
+            {t('grid.more')} 
           </button>
         )}
         {displayCount > 8 && (
           <button
             onClick={handleSeeLess}
-            className="bg-gray-600 text-white px-6 py-2  hover:bg-red-600 transition-colors"
+            className="bg-gray-600 text-white px-6  mx-2 py-2  hover:bg-red-600 transition-colors"
           >
-            See Less
-          </button>
+            {t('grid.less')} 
+            </button>
         )}
       </div>
     </div>

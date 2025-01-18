@@ -37,7 +37,7 @@ const resources = {
         cooling:'Cooling system parts',
         fuel:'Fuel system parts',
         exhaust:'Exhaust system parts',
-        stering:'Steering parts',
+        steering:'Steering parts',
         air:'Air and hydraulic system parts'
       },
       grid:{
@@ -76,14 +76,14 @@ const resources = {
       },
       branches:{
         h1:'our',
-        h1:'branches',
+        h2:'branches',
         para:'We currently have two branches, one in Dammam and another in Riyadh, both strategically positioned to serve our customers with exceptional convenience and service. Our Dammam branch caters to the Eastern Province, while the Riyadh branch provides top-notch service in the capital. At both locations, we are dedicated to delivering an outstanding customer experience.',
         a1n:'Abdullah AL BUstoni',
         a1s:'5189 as safa dist',
         a1d:'jeddah',
-        a1n:'rail street',
-        a1s:'al bathaa, al aml dist',
-        a1d:'riyadh',
+        a2n:'rail street',
+        a2s:'al bathaa, al aml dist',
+        a2d:'riyadh',
       },
       contact:{
         h1:'contact',
@@ -141,7 +141,7 @@ const resources = {
         cooling: 'أجزاء نظام التبريد',
         fuel: 'أجزاء نظام الوقود',
         exhaust: 'أجزاء نظام العادم',
-        stering: 'أجزاء التوجيه',
+        steering: 'أجزاء التوجيه',
         air: 'أجزاء نظام الهواء والهيدروليك'
       },
       grid: {
@@ -180,6 +180,7 @@ const resources = {
       },
       branches: {
         h1: 'فروعنا',
+        h2:'',
         para: 'لدينا حاليًا فرعين، أحدهما في الدمام والآخر في الرياض، وكلاهما يقعان بشكل استراتيجي لخدمة عملائنا براحة وخدمة استثنائية. يخدم فرع الدمام المنطقة الشرقية، بينما يقدم فرع الرياض خدمة عالية الجودة في العاصمة. في كلا الموقعين، نحن ملتزمون بتقديم تجربة عملاء متميزة.',
         a1n: 'عبدالله البسطوني',
         a1s: '5189 حي الصفا',

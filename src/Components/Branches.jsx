@@ -1,3 +1,4 @@
+import { t } from 'i18next';
 import React, { useState, useEffect } from 'react';
 
 function Branches() {
@@ -15,22 +16,22 @@ function Branches() {
     <div id='branches' className='h-[] w-full flex flex-col justify-center items-center my-[10vh] text-center'>
       <div className="h-[] w-full">
         <p className='text-7xl' data-aos="fade-up"
-    data-aos-duration="1000">Our <span className='text-red-600'>Branches</span></p>
+    data-aos-duration="1000">{t('branches.h1')} <span className='text-red-600'>{t('branches.h2')} </span></p>
         <p data-aos="fade-up"
     data-aos-duration="1600" className='text-center py-10 sm:px-40 px-3 text-3xl tracking-wide'>
-          We currently have two branches, one in Dammam and another in Riyadh, both strategically positioned to serve our customers with exceptional convenience and service. Our Dammam branch caters to the Eastern Province, while the Riyadh branch provides top-notch service in the capital. At both locations, we are dedicated to delivering an outstanding customer experience.
+{t('branches.para')}
         </p>
         <div data-aos="fade-up"
     data-aos-duration="1600" className="address1 border border-black p-5 w-[300px] text-2xl sm:w-[500px] flex flex-col justify-center items-center my-6 mx-auto">
-          <p>Abdullah Al Bustoni</p>
-          <p>5189 As Aafa Dist</p>
-          <p>Jeddah</p>
+          <p>{t('branches.a1n')}</p>
+          <p>{t('branches.a1s')}</p>
+          <p>{t('branches.a1d')}</p>
         </div>
         <div data-aos="fade-up"
     data-aos-duration="1600" className="address2 border border-black p-5 w-[300px] text-2xl sm:w-[500px] flex flex-col justify-center items-center mx-auto">
-          <p>Rail Street</p>
-          <p>Al Bathaa, Al Aml Dist</p>
-          <p>Riyadh</p>
+          <p>{t('branches.a2n')}</p>
+          <p>{t('branches.a2s')}</p>
+          <p>{t('branches.a2d')}</p>
         </div>
       </div>
       <div className='py-40'>

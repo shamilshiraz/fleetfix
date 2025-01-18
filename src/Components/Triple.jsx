@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { t } from 'i18next';
 
 const ResponsiveCardSlider = () => {
   const [startIndex, setStartIndex] = useState(0);
@@ -33,18 +34,18 @@ const ResponsiveCardSlider = () => {
   }, []);
 
   const cards = [
-    { id: 1, title: 'Engine parts', description: '', image: './engine.png' },
-    { id: 2, title: 'Transmission parts', description: 'Relax by crystal waters', image: '/transmission.png' },
-    { id: 3, title: 'Brake parts', description: 'Urban adventures await', image: '/brake.png' },
-    { id: 4, title: 'Suspension parts', description: 'Connect with nature', image: '/suspension.png' },
-    { id: 5, title: 'Electrical parts', description: 'Adventure in the dunes', image: '/electric.png' },
-    { id: 6, title: 'Body parts', description: 'Tropical paradise tours', image: '/bodyparts.png' },
-    { id: 7, title: 'Wheels and tires', description: 'Tropical paradise tours', image: '/tyre.png' },
-    { id: 8, title: 'Cooling system parts', description: 'Tropical paradise tours', image: '/cooling.png' },
-    { id: 9, title: 'Fuel system parts', description: 'Tropical paradise tours', image: '/fuel.png' },
-    { id: 10, title: 'Exhaust system parts', description: 'Tropical paradise tours', image: '/exhaust.png' },
-    { id: 11, title: 'Steering parts', description: 'Tropical paradise tours', image: '/steering.png' },
-    { id: 12, title: 'Air and hydraulic system parts', description: 'Tropical paradise tours', image: '/hydraulic.png' },
+    { id: 1, title: t('products.engine'), description: '', image: './engine.png' },
+    { id: 2, title: t('products.transmission'), description: 'Relax by crystal waters', image: '/transmission.png' },
+    { id: 3, title: t('products.brake'), description: 'Urban adventures await', image: '/brake.png' },
+    { id: 4, title: t('products.suspension'), description: 'Connect with nature', image: '/suspension.png' },
+    { id: 5, title: t('products.electrical'), description: 'Adventure in the dunes', image: '/electric.png' },
+    { id: 6, title: t('products.body'), description: 'Tropical paradise tours', image: '/bodyparts.png' },
+    { id: 7, title: t('products.wheels'), description: 'Tropical paradise tours', image: '/tyre.png' },
+    { id: 8, title: t('products.cooling'), description: 'Tropical paradise tours', image: '/cooling.png' },
+    { id: 9, title: t('products.fuel'), description: 'Tropical paradise tours', image: '/fuel.png' },
+    { id: 10, title: t('products.exhaust'), description: 'Tropical paradise tours', image: '/exhaust.png' },
+    { id: 11, title: t('products.steering'), description: 'Tropical paradise tours', image: '/steering.png' },
+    { id: 12, title: t('products.air'), description: 'Tropical paradise tours', image: '/hydraulic.png' },
   ];
 
   const getVisibleCards = () => (isMobile ? 1 : 3);

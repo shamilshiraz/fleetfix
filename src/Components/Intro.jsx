@@ -41,7 +41,7 @@ export default function Intro() {
                 <motion.img 
                     src={images[currentImage]} 
                     initial={{ scale: 1 }}
-                    animate={{ scale: [1, 1.2] }}
+                    animate={{ scale: [1, 1.5] }}
                     transition={{
                         repeat: Infinity,
                         repeatType: 'loop',
