@@ -27,8 +27,8 @@ const Nav = () => {
         <ul className="flex gap-6">
           <li><a href="#about">{t('nav.about')}</a></li>
           <li><a href="#products">{t('nav.products')}</a></li>
-          <li><a href="#branches">{t('nav.branches')}</a></li>
-          <li><a href="/col">{t('nav.brochure')}</a></li>
+          <li><a href="#branhces">{t('nav.branches')}</a></li>
+          <li><a href="">{t('nav.brochure')}</a></li>
           <li><a href="#contact">{t('nav.contact')}</a></li>
         </ul>
       </div>

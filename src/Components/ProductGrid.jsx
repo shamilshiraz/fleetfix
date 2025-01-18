@@ -74,23 +74,24 @@ const ProductGrid = () => {
   return (
     <div className="container mx-auto px-4 py-8 font-beb">
       {/* Category Filter */}
-      <div className="mb-8">
-        <div className="relative w-64">
-          <select
-            className="w-full p-2 border rounded-lg appearance-none bg-white pr-8 cursor-pointer"
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-          >
-            <option value="All">All Categories</option>
-            {CATEGORIES.map(category => (
-              <option key={category} value={category}>
-                {category}
-              </option>
-            ))}
-          </select>
-          <ChevronDown className="absolute right-2 top-3 w-4 h-4 text-gray-500" />
-        </div>
-      </div>
+      <div className="mb-8 flex justify-center">
+  <div className="relative w-64">
+    <select
+      className="w-full p-2 border rounded-lg appearance-none bg-white pr-8 cursor-pointer text-center"
+      value={selectedCategory}
+      onChange={(e) => setSelectedCategory(e.target.value)}
+    >
+      <option value="All">All Categories</option>
+      {CATEGORIES.map(category => (
+        <option key={category} value={category}>
+          {category}
+        </option>
+      ))}
+    </select>
+    <ChevronDown className="absolute right-2 top-3 w-4 h-4 text-gray-500" />
+  </div>
+</div>
+
 
       {/* Product Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
