@@ -43,7 +43,7 @@ export default function Intro() {
                     className="absolute inset-0 h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                    <div className="flex flex-col items-center bg-opacity-50 p-10 mt-20">
+                    <div className="flex flex-col items-center bg-opacity-50 p-10 mt-10">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentIndex}
