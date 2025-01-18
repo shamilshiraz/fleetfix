@@ -95,7 +95,7 @@ function Contact() {
           </form>
         </div>
         <div data-aos="fade-up"
-    data-aos-duration="1600" className="flex-1  p-6 rblackg text-2xl">
+    data-aos-duration="1000" className="flex-1  p-6 rblackg text-2xl">
           <p>Connect with us through</p>
             <div className="border border  border-black p-2 my-4">
               <a href=""className='flex'><FaWhatsapp className='mr-3'/>              Contact us via whatsapp</a>
