@@ -64,7 +64,10 @@ const Nav = () => {
           ? 'black' 
           : 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)'
       }}
-      className="p-4 fixed top-0 z-20 w-full text-white flex justify-between items-center h-[20vh] font-hik text-4xl">
+      className={`p-4 fixed top-0 z-20 w-full text-white flex justify-between items-center ${
+        i18n.language === 'ar' ? 'font-jan' : 'font-hik'
+      } h-[20vh] text-4xl`}
+            >
       <div>
         <img src="ffwhite.png" className="h-[13vh]" alt="logo" />
       </div>
