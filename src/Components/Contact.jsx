@@ -7,8 +7,11 @@ import { PhoneCall } from 'lucide-react';
 function Contact() {
   return (
     <div id='contact' className='flex font-beb flex-col justify-center items-center pt-[vh]'>
-      <div className="text-7xl">CONTACT <span className='text-red-600'>US</span></div>
-      <div className="h-[50vh] w-[90vw] py-5">
+      <div className="text-7xl" data-aos="fade-up"
+    data-aos-duration="1000">CONTACT <span className='text-red-600'>US</span></div>
+      <div
+      data-aos="fade-up"
+      data-aos-duration="1600" className="h-[50vh] w-[90vw] py-5">
         <iframe
           className="h-full w-full border-0"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125218.4253922299!2d75.81081395000001!3d11.255834749999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65938563d4747%3A0x32150641ca32ecab!2sKozhikode%2C%20Kerala!5e0!3m2!1sen!2sin!4v1737069733962!5m2!1sen!2sin"
@@ -17,9 +20,11 @@ function Contact() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <p className='text-4xl py-5'>SEND US A QUERY</p>
+      <p className='text-4xl py-5' data-aos="fade-up"
+    data-aos-duration="1600">SEND US A QUERY</p>
 
-      <div className="flex flex-col 2xl:flex-row w-full max-w-4xl gap-8">
+      <div data-aos="fade-up"
+    data-aos-duration="2000" className="flex flex-col 2xl:flex-row w-full max-w-4xl gap-8">
         <div className="flex-1">
           <form className="space-y-4 bg-white p-6 rblackg">
             
@@ -89,7 +94,8 @@ function Contact() {
             </div>
           </form>
         </div>
-        <div className="flex-1  p-6 rblackg text-2xl">
+        <div data-aos="fade-up"
+    data-aos-duration="1600" className="flex-1  p-6 rblackg text-2xl">
           <p>Connect with us through</p>
             <div className="border border  border-black p-2 my-4">
               <a href=""className='flex'><FaWhatsapp className='mr-3'/>              Contact us via whatsapp</a>

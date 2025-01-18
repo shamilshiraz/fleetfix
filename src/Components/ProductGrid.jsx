@@ -72,7 +72,10 @@ const ProductGrid = () => {
   }, [selectedCategory]);
 
   return (
-    <div className="container mx-auto px-4 py-8 font-beb">
+    <div 
+    data-aos="fade-up"
+    data-aos-duration="1600"
+    className="container mx-auto px-4 py-8 font-beb">
       {/* Category Filter */}
       <div className="mb-8 flex justify-center">
   <div className="relative w-64">
@@ -120,7 +123,7 @@ const ProductGrid = () => {
         {hasMore && (
           <button
             onClick={handleSeeMore}
-            className="border border-black text-black bg-white px-6 py-2  hover:bg-red-700 transition-colors"
+            className="border border-black text-black bg-white px-6 py-2 hover:text-white  hover:bg-red-600 transition-colors"
           >
             See More 
           </button>
@@ -128,7 +131,7 @@ const ProductGrid = () => {
         {displayCount > 8 && (
           <button
             onClick={handleSeeLess}
-            className="bg-gray-600 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition-colors"
+            className="bg-gray-600 text-white px-6 py-2  hover:bg-red-600 transition-colors"
           >
             See Less
           </button>

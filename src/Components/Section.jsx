@@ -22,8 +22,12 @@ export default function Section() {
             <div className="absolute flex items-center justify-center w-[80vw] h-[70vh] z-10">
                 <div className="bg-white h-full w-full p-6 rounded-md shadow-lg font-beb grid place-content-center text-center">
                     {/* Your content goes here */}
-                    <p className='text-6xl'>{t('mission.h1')} <span className='text-red-600'>{t('mission.h2')}</span></p>
-                    <p className='text-3xl py-5'> {t('mission.para')}</p>
+                    <p className='text-6xl'
+                    data-aos="fade-up"
+                    >{t('mission.h1')} <span className='text-red-600'>{t('mission.h2')}</span></p>
+                    <p className='text-3xl py-5'
+                    data-aos="fade-up"
+                    data-aos-duration="1600"> {t('mission.para')}</p>
 
                 </div>
             </div>

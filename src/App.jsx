@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './i18n'
 import Nav from './Components/Nav'
 import Home from './Components/Home'
@@ -11,9 +11,19 @@ import Display from './Components/Display'
 import Contact from './Components/Contact'
 import ProductGrid from './Components/ProductGrid'
 import Branches from './Components/Branches'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
+
+
   return (
     <div>
       <Nav/>
