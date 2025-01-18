@@ -13,7 +13,7 @@ export default function Section() {
     const y = useTransform(scrollYProgress, [0, 1], ["-10vh", "10vh"]);
 
     return (
-        <div
+        <div id="mission"
             ref={container}
             className="relative flex items-center justify-center h-screen overflow-hidden"
             style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}

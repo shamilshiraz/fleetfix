@@ -21,8 +21,8 @@ function App() {
       <About/>
       <Section/>
       <Display/>
-      <Branches/>
       <ProductGrid/>
+      <Branches/>
       <Contact/>
       <Footer/>
     </div>

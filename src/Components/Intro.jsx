@@ -11,7 +11,7 @@ export default function Intro() {
     const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
 
     return (
-        <div className='h-screen  overflow-hidden'>
+        <div id='mission' className='h-screen  overflow-hidden'>
             <motion.div style={{ y }} className='relative h-full '>
                 <img 
                     src={'./truck.jpg'} 

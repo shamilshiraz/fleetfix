@@ -1,18 +1,49 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+ 
 
 // Sample data structure
 const CATEGORIES = [
   "Engine", "Transmission", "Brake", "Suspension", 
-  "Electrical", "Wheels and tyres", "Cooling system", "Fuel system", "Exhaust system","Steering","Air and Hydraulic"
+  "Electrical","Body", "Wheels and tyres",
+  //  "Cooling system", "Fuel system", "Exhaust system","Steering","Air and Hydraulic"
 ];
 
-const PRODUCTS = Array.from({ length: 50 }, (_, i) => ({
-  id: i + 1,
-  name: `Product ${i + 1}`,
-  category: CATEGORIES[i % CATEGORIES.length],
-  image: `/api/placeholder/400/300`
-}));
+const PRODUCTS = [
+  { id: 1, name: "Pistons", category: "Engine", image: './piston.png' },
+  { id: 2, name: "Cylinders", category: "Engine", image: './cylinder.png' },
+  { id: 3, name: "Crankshafts", category: "Engine", image: './crankshaft.png' },
+  { id: 4, name: "Camshafts", category: "Engine", image: './camshaft.png' },
+  { id: 5, name: "Valves", category: "Engine", image: './valve.png' },
+  { id: 6, name: "Gears", category: "Transmission", image: './transmission.png' },
+  { id: 7, name: "Bearings", category: "Transmission", image: './bearing.png' },
+  { id: 8, name: "Seals", category: "Transmission", image: './seal.png' },
+  { id: 9, name: "Clutches", category: "Transmission", image: './clutch.png' },
+  { id: 10, name: "Pads", category: "Brake", image: './pads.png' },
+  { id: 11, name: "Rotors", category: "Brake", image: './rotors.png' },
+  { id: 12, name: "Calipers", category: "Brake", image: './caliper.png' },
+  { id: 13, name: "Brake shoes", category: "Brake", image: './shoes.png' },
+  { id: 14, name: "Shocks", category: "Suspension", image: './shocks.png' },
+  { id: 15, name: "Struts", category: "Suspension", image: './struts.png' },
+  { id: 16, name: "Springs", category: "Suspension", image: './spring.png' },
+  { id: 17, name: "Bushings", category: "Suspension", image: './bush.png' },
+  { id: 18, name: "Batteries", category: "Electrical", image: './battery.png' },
+  { id: 19, name: "Alternators", category: "Electrical", image: './electric.png' },
+  { id: 20, name: "Starters", category: "Electrical", image: './starter.png' },
+  { id: 21, name: "Fuses", category: "Electrical", image: './fuse.png' },
+  { id: 22, name: "Bumpers", category: "Body", image: './bodyparts.png' },
+  { id: 23, name: "Fenders", category: "Body", image: './fenders.png' },
+  { id: 24, name: "Doors", category: "Body", image: './doors.png' },
+  { id: 25, name: "Mirrors", category: "Body", image: './mirrors.png' },
+  { id: 26, name: "Rims", category: "Wheels and tyres", image: './rims.png' },
+  { id: 27, name: "Tires", category: "Wheels and tyres", image: './tyres.png' },
+  { id: 28, name: "Hubs", category: "Wheels and tyres", image: './hubs.png' },
+  { id: 29, name: "Bearings", category: "Wheels and tyres", image: './bearings.png' },
+
+
+
+
+]
 
 const ProductGrid = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -71,12 +102,12 @@ const ProductGrid = () => {
             <div className="aspect-[4/3] relative">
               <img
                 src={product.image}
-                alt={product.name}
+              alt={product.name}
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="p-4 bg-red-600 text-center">
-              <div className="text-sm text-gray-600 mb-1">{product.category}</div>
+              <div className="text-sm text-gray-300 mb-1">{product.category}</div>
               <h3 className="font-medium text-white line-clamp-2">{product.name}</h3>
             </div>
           </div>

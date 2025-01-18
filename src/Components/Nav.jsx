@@ -27,8 +27,9 @@ const Nav = () => {
         <ul className="flex gap-6">
           <li><a href="/">{t('nav.about')}</a></li>
           <li><a href="/about">{t('nav.products')}</a></li>
+          <li><a href="">{t('nav.branches')}</a></li>
           <li><a href="/col">{t('nav.brochure')}</a></li>
-          <li><a href="/contact">{t('nav.contact')}</a></li>
+          <li><a href="">{t('nav.contact')}</a></li>
         </ul>
       </div>
 
@@ -56,10 +57,11 @@ const Nav = () => {
         <div className={`fixed top-0 right-0 h-full w-full bg-black shadow-lg transform transition-transform duration-300 ease-in-out lg:hidden ${visible ? 'translate-x-0' : 'translate-x-full'} z-10`}>
           <div className="flex flex-col pt-[10vh]">
             <ul className="flex flex-col gap-4 p-6 text-8xl">
-              <li><a href="/" onClick={() => setVisible(false)}>{t('nav.about')}</a></li>
-              <li><a href="/about" onClick={() => setVisible(false)}>{t('nav.products')}</a></li>
-              <li><a href="/col" onClick={() => setVisible(false)}>{t('nav.brochure')}</a></li>
-              <li><a href="/contact" onClick={() => setVisible(false)}>{t('nav.contact')}</a></li>
+              <li><a href="#about" onClick={() => setVisible(false)}>{t('nav.about')}</a></li>
+              <li><a href="#products" onClick={() => setVisible(false)}>{t('nav.products')}</a></li>
+              <li><a href="#branhces" onClick={() => setVisible(false)}>{t('nav.branches')}</a></li>
+              <li><a href="" onClick={() => setVisible(false)}>{t('nav.brochure')}</a></li>
+              <li><a href="#contact" onClick={() => setVisible(false)}>{t('nav.contact')}</a></li>
             </ul>
           </div>
         </div>
