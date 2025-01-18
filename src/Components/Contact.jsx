@@ -30,7 +30,7 @@ function Contact() {
       </div>
       <p className='text-4xl py-5' data-aos="fade-up" data-aos-duration="1600">SEND US A QUERY</p>
 
-      <div data-aos="fade-up" data-aos-duration="2000" className="flex flex-col 2xl:flex-row w-full max-w-4xl gap-8">
+      <div className="flex flex-col 2xl:flex-row w-full max-w-4xl gap-8">
         <div className="flex-1">
           <form onSubmit={sendEmail} className="space-y-4 bg-white p-6 rblackg">
             {/* Name Field */}
@@ -65,7 +65,7 @@ function Contact() {
             </div>
           </form>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" className="flex-1 p-6 rblackg text-2xl">
+        <div  className="flex-1 p-6 rblackg text-2xl">
           <p>Connect with us through</p>
           <div className="border border-black p-2 my-4">
             <a href="" className='flex'><FaWhatsapp className='mr-3' />Contact us via WhatsApp</a>
