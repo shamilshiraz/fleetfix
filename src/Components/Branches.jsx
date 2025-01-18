@@ -12,7 +12,7 @@ function Branches() {
   }, []);
 
   return (
-    <div id='branhces' className='h-[] w-full flex flex-col justify-center items-center font-beb my-[10vh] text-center'>
+    <div id='branches' className='h-[] w-full flex flex-col justify-center items-center font-beb my-[10vh] text-center'>
       <div className="h-[] w-full">
         <p className='text-7xl' data-aos="fade-up"
     data-aos-duration="1000">Our <span className='text-red-600'>Branches</span></p>

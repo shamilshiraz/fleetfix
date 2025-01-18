@@ -63,7 +63,7 @@ const ProductGrid = () => {
   const handleSeeLess = () => {
     setDisplayCount(8);
     // Scroll back to top of grid smoothly
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Reset display count when category changes
@@ -112,7 +112,7 @@ const ProductGrid = () => {
             </div>
             <div className="p-4 bg-red-600 text-center">
               <div className="text-sm text-gray-300 mb-1">{product.category}</div>
-              <h3 className="font-medium text-white line-clamp-2">{product.name}</h3>
+              <h3 className="text-2xl text-white line-clamp-2">{product.name}</h3>
             </div>
           </div>
         ))}

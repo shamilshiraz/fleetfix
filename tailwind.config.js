@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         beb: ['beb', 'sans-serif'], // Add your custom font here
+        hik:['hik','sans-serif']
       },
     },
   },

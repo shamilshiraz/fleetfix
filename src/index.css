@@ -16,3 +16,8 @@ body[dir='ltr'] {
   font-family: 'beb';
   src: url('./font/BebasNeue-Regular.otf');
 }
+
+@font-face {
+  font-family: 'hik';
+  src: url('./font/HikouRegular.otf');
+}

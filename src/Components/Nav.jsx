@@ -9,15 +9,25 @@ const Nav = () => {
   const handleChange = (event) => {
     const selectedLanguage = event.target.value;
     i18n.changeLanguage(selectedLanguage);
-    document.body.dir = selectedLanguage === 'ar' ? 'rtl' : 'ltr'; // Change text direction
+    document.body.dir = selectedLanguage === 'ar' ? 'rtl' : 'ltr';
   };
 
   useEffect(() => {
-    document.body.dir = i18n.language === 'ar' ? 'rtl' : 'ltr'; // Initial direction setup
+    document.body.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
   }, [i18n.language]);
 
+  const handleScroll = (targetId) => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  };
+
   return (
-    <nav className="p-4  fixed top-0 z-20 w-full bg-black text-white flex justify-between items-center h-[20vh] font-beb text-4xl">
+    <nav className="p-4 fixed top-0 z-20 w-full bg-black text-white flex justify-between items-center h-[20vh] font-hik text-4xl">
       <div>
         <img src="ffwhite.png" className="h-[13vh]" alt="logo" />
       </div>
@@ -25,11 +35,11 @@ const Nav = () => {
       {/* Desktop Navigation */}
       <div className="hidden lg:flex py-3 text-xl">
         <ul className="flex gap-6">
-          <li><a href="#about">{t('nav.about')}</a></li>
-          <li><a href="#products">{t('nav.products')}</a></li>
-          <li><a href="#branhces">{t('nav.branches')}</a></li>
-          <li><a href="">{t('nav.brochure')}</a></li>
-          <li><a href="#contact">{t('nav.contact')}</a></li>
+          <li><button onClick={() => handleScroll('about')}>{t('nav.about')}</button></li>
+          <li><button onClick={() => handleScroll('products')}>{t('nav.products')}</button></li>
+          <li><button onClick={() => handleScroll('branches')}>{t('nav.branches')}</button></li>
+          <li><button onClick={() => handleScroll('brochure')}>{t('nav.brochure')}</button></li>
+          <li><button onClick={() => handleScroll('contact')}>{t('nav.contact')}</button></li>
         </ul>
       </div>
 
@@ -40,13 +50,13 @@ const Nav = () => {
             onChange={handleChange}
             className="bg-black border text-white h-12 px-3"
           >
-            <option value="en" className='text-lg'>EN</option>
-            <option value="ar" className='text-lg'>العر</option>
+            <option value="en" className="text-lg">EN</option>
+            <option value="ar" className="text-lg">العر</option>
           </select>
         </div>
 
-        {/* Hamburger Menu Button - Only visible on mobile */}
-        <button 
+        {/* Hamburger Menu Button */}
+        <button
           className="z-20 lg:hidden"
           onClick={() => setVisible(!visible)}
         >
@@ -56,19 +66,19 @@ const Nav = () => {
         {/* Mobile Sidebar */}
         <div className={`fixed top-0 right-0 h-full w-full bg-black shadow-lg transform transition-transform duration-300 ease-in-out lg:hidden ${visible ? 'translate-x-0' : 'translate-x-full'} z-10`}>
           <div className="flex flex-col pt-[10vh]">
-            <ul className="flex flex-col gap-4 p-6 text-8xl">
-              <li><a href="#about" onClick={() => setVisible(false)}>{t('nav.about')}</a></li>
-              <li><a href="#products" onClick={() => setVisible(false)}>{t('nav.products')}</a></li>
-              <li><a href="#branhces" onClick={() => setVisible(false)}>{t('nav.branches')}</a></li>
-              <li><a href="" onClick={() => setVisible(false)}>{t('nav.brochure')}</a></li>
-              <li><a href="#contact" onClick={() => setVisible(false)}>{t('nav.contact')}</a></li>
+            <ul className="flex flex-col gap-4 p-6 text-7xl">
+              <li><button onClick={() => { handleScroll('about'); setVisible(false); }}>{t('nav.about')}</button></li>
+              <li><button onClick={() => { handleScroll('products'); setVisible(false); }}>{t('nav.products')}</button></li>
+              <li><button onClick={() => { handleScroll('branches'); setVisible(false); }}>{t('nav.branches')}</button></li>
+              <li><button onClick={() => { handleScroll('brochure'); setVisible(false); }}>{t('nav.brochure')}</button></li>
+              <li><button onClick={() => { handleScroll('contact'); setVisible(false); }}>{t('nav.contact')}</button></li>
             </ul>
           </div>
         </div>
 
         {/* Overlay */}
         {visible && (
-          <div 
+          <div
             className="fixed inset-0 bg-black bg-opacity-50 lg:hidden z-0"
             onClick={() => setVisible(false)}
           />
@@ -79,5 +89,6 @@ const Nav = () => {
 };
 
 export default Nav;
+
 
 
