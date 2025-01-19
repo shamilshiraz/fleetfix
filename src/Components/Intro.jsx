@@ -3,7 +3,7 @@ import { useScroll, useTransform, motion, useSpring, AnimatePresence } from 'fra
 
 export default function Intro() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const images = ['./truck.jpg', 'truck2.webp', 'truck3.jpg'];
+    const images = ['./truck.jpg', 'truck2.webp', 'forklift.webp'];
     const text1 = ['Fleets', 'Spare'];
     const text2 = ['fix', 'Parts'];
     const container = useRef();

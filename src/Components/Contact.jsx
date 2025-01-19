@@ -4,21 +4,24 @@ import { CiMail } from "react-icons/ci";
 import { PhoneCall } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { t } from 'i18next';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
-
-    emailjs.sendForm('your_service_id', 'your_template_id', e.target, 'your_user_id')
+  
+    emailjs.sendForm('service_yd15wqq', 'template_yqd51cl', e.target, '_pMg6qJhzGNNq3nNT')
       .then((result) => {
-          console.log(result.text);
-          alert('Message sent successfully!');
+        toast.success('Message sent successfully!'); // Success toast
       }, (error) => {
-          console.log(error.text);
-          alert('Failed to send the message, please try again.');
+        console.log(error.text);
+        toast.error('Failed to send the message, please try again.'); // Error toast
       });
-
+  
     e.target.reset();
   };
+  
 
   return (
     <div id='contact' className='flex  flex-col justify-center items-center pt-[vh]'>
@@ -79,6 +82,7 @@ function Contact() {
           <p className='py-10 text-gray-500'>{t('contact.ct')}</p>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

@@ -78,7 +78,7 @@ const Nav = () => {
           <li><button onClick={() => handleScroll('about')}>{t('nav.about')}</button></li>
           <li><button onClick={() => handleScroll('products')}>{t('nav.products')}</button></li>
           <li><button onClick={() => handleScroll('branches')}>{t('nav.branches')}</button></li>
-          <li><button onClick={() => handleScroll('brochure')}>{t('nav.brochure')}</button></li>
+          <li><button ><a href="" target="_blank">{t('nav.brochure')}</a></button></li>
           <li><button onClick={() => handleScroll('contact')}>{t('nav.contact')}</button></li>
         </ul>
       </div>
