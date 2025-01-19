@@ -78,7 +78,7 @@ const Nav = () => {
           <li><button onClick={() => handleScroll('about')}>{t('nav.about')}</button></li>
           <li><button onClick={() => handleScroll('products')}>{t('nav.products')}</button></li>
           <li><button onClick={() => handleScroll('branches')}>{t('nav.branches')}</button></li>
-          <li><button ><a href="" target="_blank">{t('nav.brochure')}</a></button></li>
+          <li><button ><a href="https://drive.google.com/file/d/1n2h8VWb9IIM_ru6vUHxY-XhIXLaGU_Ik/view?usp=sharing" target="_blank">{t('nav.brochure')}</a></button></li>
           <li><button onClick={() => handleScroll('contact')}>{t('nav.contact')}</button></li>
         </ul>
       </div>
@@ -110,7 +110,7 @@ const Nav = () => {
               <li><button onClick={() => { handleScroll('about'); setVisible(false); }}>{t('nav.about')}</button></li>
               <li><button onClick={() => { handleScroll('products'); setVisible(false); }}>{t('nav.products')}</button></li>
               <li><button onClick={() => { handleScroll('branches'); setVisible(false); }}>{t('nav.branches')}</button></li>
-              <li><button onClick={() => { handleScroll('brochure'); setVisible(false); }}>{t('nav.brochure')}</button></li>
+              <li><button onClick={() => { setVisible(false); }}><a a href="https://drive.google.com/file/d/1n2h8VWb9IIM_ru6vUHxY-XhIXLaGU_Ik/view?usp=sharing" target="_blank">{t('nav.brochure')}</a></button></li>
               <li><button onClick={() => { handleScroll('contact'); setVisible(false); }}>{t('nav.contact')}</button></li>
             </ul>
           </div>
