@@ -25,7 +25,7 @@ function Contact() {
 
   return (
     <div id='contact' className='flex  flex-col justify-center items-center pt-[vh]'>
-      <div className="text-7xl" data-aos="fade-up" data-aos-duration="1000">
+      <div className="text-7xl" >
         {t('contact.h1')} <span className='text-red-600'> {t('contact.h2')}</span>
       </div>
       <div data-aos="fade-up" data-aos-duration="1600" className="h-[50vh] w-[90vw] py-5">

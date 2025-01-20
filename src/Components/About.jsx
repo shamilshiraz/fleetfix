@@ -23,7 +23,7 @@ function About() {
     {t('about.para')} </p>
                             <motion.img
                                 className='h-[10vh] m-20'
-                                src="./bolt.png"
+                                src="./bolt.webp"
                                 alt="Rotating Bolt"
                                 initial={{ rotate: 0 }}
                                 style={{ rotate }}                                transition={{ repeat: Infinity, duration: 2, ease: "linear" }}

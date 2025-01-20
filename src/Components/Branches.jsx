@@ -35,7 +35,7 @@ function Branches() {
         </div>
       </div>
       <div className='py-40'>
-        <img src={`./${imageIndex}.png`} alt={`Branch ${imageIndex}`} className='h-[20vh]' />
+        <img src={`./${imageIndex}.webp`} alt={`Branch ${imageIndex}`} className='h-[20vh]' />
       </div>
     </div>
   );

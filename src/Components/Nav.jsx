@@ -69,7 +69,7 @@ const Nav = () => {
       } h-[20vh] text-4xl`}
             >
       <div>
-        <img src="ffwhite.png" className="h-[13vh]" alt="logo" />
+        <img src="ffwhite.webp" className="h-[13vh]" alt="logo" />
       </div>
 
       {/* Desktop Navigation */}
