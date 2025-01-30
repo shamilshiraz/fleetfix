@@ -29,7 +29,14 @@ function Contact() {
         {t('contact.h1')} <span className='text-red-600'> {t('contact.h2')}</span>
       </div>
       <div data-aos="fade-up" data-aos-duration="1600" className="h-[50vh] w-[90vw] py-5">
-        <iframe className="h-full w-full border-0" src="https://www.google.com/maps/embed?pb=..." allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3626.4717902589814!2d46.7416839753639!3d24.64188387807263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDM4JzMwLjgiTiA0NsKwNDQnMzkuMyJF!5e0!3m2!1sen!2sin!4v1737973798534!5m2!1sen!2sin"
+  className='w-full h-full'
+  style={{ border: 0 }} 
+  allowFullScreen 
+  loading="lazy" 
+  referrerPolicy="no-referrer-when-downgrade">
+</iframe>
       </div>
       <p className='text-4xl py-5' data-aos="fade-up" data-aos-duration="1600"> {t('contact.query')}</p>
 

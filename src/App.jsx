@@ -13,6 +13,10 @@ import ProductGrid from './Components/ProductGrid'
 import Branches from './Components/Branches'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Forklift from './Components/Forklift'
+import { Route, Router, Routes } from 'react-router-dom'
+import Enter from './pages/Enter'
+import Productspage from './pages/Productspage'
 
 
 
@@ -25,17 +29,24 @@ function App() {
 
 
   return (
-    <div>
-      <Nav/>
-      <Intro/>
-      <About/>
-      <Section/>
-      <Display/>
-      <ProductGrid/>
-      <Branches/>
-      <Contact/>
-      <Footer/>
-    </div>
+    <>
+          <Nav/>
+        <Routes>
+      <Route path='/'
+      element={
+        <>
+        <Enter/>
+        </>
+      }/>
+            <Route path='/productspage'
+      element={
+        <>
+        <Productspage/>
+        </>
+      }/>
+    </Routes>
+    </>
+
   )
 }
 

@@ -1,48 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
+import { useLocation } from 'react-router-dom';
 
 const Nav = () => {
   const [visible, setVisible] = useState(false);
   const { t, i18n } = useTranslation();
+  const location = useLocation(); // Get current page path
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleChange = (event) => {
     const selectedLanguage = event.target.value;
     i18n.changeLanguage(selectedLanguage);
     document.body.dir = selectedLanguage === 'ar' ? 'rtl' : 'ltr';
-    // Apply the correct font globally based on language
+
     if (selectedLanguage === 'ar') {
       document.body.classList.add('font-jan');
       document.body.classList.remove('font-hik', 'font-beb');
-    } else if (selectedLanguage === 'en') {
-      document.body.classList.add('font-hik'); // Or 'font-beb' based on your default
+    } else {
+      document.body.classList.add('font-hik'); // Change to 'font-beb' if needed
       document.body.classList.remove('font-jan');
     }
   };
 
   useEffect(() => {
     document.body.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
-    // Apply the font on initial load
     if (i18n.language === 'ar') {
       document.body.classList.add('font-jan');
       document.body.classList.remove('font-hik', 'font-beb');
     } else {
-      document.body.classList.add('font-beb'); // Or 'font-beb'
+      document.body.classList.add('font-beb'); 
       document.body.classList.remove('font-jan');
     }
   }, [i18n.language]);
-
-  const handleScroll = (targetId) => {
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      window.scrollTo({
-        top: targetElement.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  };
-
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,14 +50,14 @@ const Nav = () => {
       style={{
         transitionDuration: '0.3s',
         transition: 'ease-in',
-        background: isScrolled 
-          ? 'black' 
-          : 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)'
+        background: location.pathname === '/'  // Apply gradient only on home
+          ? isScrolled ? 'black' : 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)'
+          : 'black'  // Keep black on other pages
       }}
       className={`p-4 fixed top-0 z-20 w-full text-white flex justify-between items-center ${
         i18n.language === 'ar' ? 'font-jan' : 'font-hik'
       } h-[20vh] text-4xl`}
-            >
+    >
       <div>
         <img src="ffwhite.webp" className="h-[13vh]" alt="logo" />
       </div>
@@ -110,7 +100,7 @@ const Nav = () => {
               <li><button onClick={() => { handleScroll('about'); setVisible(false); }}>{t('nav.about')}</button></li>
               <li><button onClick={() => { handleScroll('products'); setVisible(false); }}>{t('nav.products')}</button></li>
               <li><button onClick={() => { handleScroll('branches'); setVisible(false); }}>{t('nav.branches')}</button></li>
-              <li><button onClick={() => { setVisible(false); }}><a a href="https://drive.google.com/file/d/1n2h8VWb9IIM_ru6vUHxY-XhIXLaGU_Ik/view?usp=sharing" target="_blank">{t('nav.brochure')}</a></button></li>
+              <li><button onClick={() => { setVisible(false); }}><a href="https://drive.google.com/file/d/1n2h8VWb9IIM_ru6vUHxY-XhIXLaGU_Ik/view?usp=sharing" target="_blank">{t('nav.brochure')}</a></button></li>
               <li><button onClick={() => { handleScroll('contact'); setVisible(false); }}>{t('nav.contact')}</button></li>
             </ul>
           </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import ResponsiveCardSlider from './Triple'
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 function Display() {
       const { t } = useTranslation();
@@ -13,6 +14,9 @@ function Display() {
       <div className="" data-aos="fade-up"
     data-aos-duration="1600">
         <ResponsiveCardSlider/>
+      </div>
+      <div className="">
+        <button className='border border-black p-3'><Link to={"/productspage"}>All products</Link></button>
       </div>
     </div>
   )
