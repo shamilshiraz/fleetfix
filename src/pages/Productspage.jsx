@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import ProductGrid from '../Components/ProductGrid';
 import Forklift from '../Components/Forklift';
 import Truck from '../Components/Tuck';
-
+import Forkproducts from '../Components/Forkproducts';
+import { t } from 'i18next';
 function Productspage() {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('truck');
@@ -17,7 +18,7 @@ function Productspage() {
           onClick={() => navigate(-1)}
           className="bg-black text-white px-4 py-2 rounded-lg"
         >
-          ← Back
+          ← {t('ppara.back')}
         </button>
 
         {/* Category Dropdown */}
@@ -26,8 +27,8 @@ function Productspage() {
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
         >
-          <option value="truck">Truck</option>
-          <option value="forklift">Forklift</option>
+          <option value="truck">{t('ppara.truck')}</option>
+          <option value="forklift">{t('ppara.forklift')}</option>
         </select>
       </div>
 
@@ -35,7 +36,10 @@ function Productspage() {
       {selectedCategory === 'truck' ? <>
       <Truck/>
         <ProductGrid />
-        </> : <Forklift />}
+        </> : 
+        <><Forklift />
+        <Forkproducts/>
+        </>}
     </div>
   );
 }

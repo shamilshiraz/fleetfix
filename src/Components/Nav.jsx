@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Nav = () => {
   const [visible, setVisible] = useState(false);
   const { t, i18n } = useTranslation();
-  const location = useLocation(); // Get current page path
+  const location = useLocation();
+  const navigate = useNavigate();
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleChange = (event) => {
@@ -18,7 +19,7 @@ const Nav = () => {
       document.body.classList.add('font-jan');
       document.body.classList.remove('font-hik', 'font-beb');
     } else {
-      document.body.classList.add('font-hik'); // Change to 'font-beb' if needed
+      document.body.classList.add('font-hik');
       document.body.classList.remove('font-jan');
     }
   };
@@ -29,7 +30,7 @@ const Nav = () => {
       document.body.classList.add('font-jan');
       document.body.classList.remove('font-hik', 'font-beb');
     } else {
-      document.body.classList.add('font-beb'); 
+      document.body.classList.add('font-beb');
       document.body.classList.remove('font-jan');
     }
   }, [i18n.language]);
@@ -45,14 +46,30 @@ const Nav = () => {
 
   const isScrolled = scrollPosition > 50;
 
+  const handleScroll = (targetId) => {
+    if (location.pathname !== "/") {
+      // Navigate to home first, then scroll to the section
+      navigate(`/#${targetId}`);
+    } else {
+      // If already on home, scroll smoothly
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth',
+        });
+      }
+    }
+  };
+
   return (
     <nav 
       style={{
         transitionDuration: '0.3s',
         transition: 'ease-in',
-        background: location.pathname === '/'  // Apply gradient only on home
+        background: location.pathname === '/'  
           ? isScrolled ? 'black' : 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%)'
-          : 'black'  // Keep black on other pages
+          : 'black'  
       }}
       className={`p-4 fixed top-0 z-20 w-full text-white flex justify-between items-center ${
         i18n.language === 'ar' ? 'font-jan' : 'font-hik'
@@ -68,7 +85,7 @@ const Nav = () => {
           <li><button onClick={() => handleScroll('about')}>{t('nav.about')}</button></li>
           <li><button onClick={() => handleScroll('products')}>{t('nav.products')}</button></li>
           <li><button onClick={() => handleScroll('branches')}>{t('nav.branches')}</button></li>
-          <li><button ><a href="https://drive.google.com/file/d/1n2h8VWb9IIM_ru6vUHxY-XhIXLaGU_Ik/view?usp=sharing" target="_blank">{t('nav.brochure')}</a></button></li>
+          <li><button><a href="https://drive.google.com/file/d/1n2h8VWb9IIM_ru6vUHxY-XhIXLaGU_Ik/view?usp=sharing" target="_blank">{t('nav.brochure')}</a></button></li>
           <li><button onClick={() => handleScroll('contact')}>{t('nav.contact')}</button></li>
         </ul>
       </div>
@@ -86,10 +103,7 @@ const Nav = () => {
         </div>
 
         {/* Hamburger Menu Button */}
-        <button
-          className="z-20 lg:hidden"
-          onClick={() => setVisible(!visible)}
-        >
+        <button className="z-20 lg:hidden" onClick={() => setVisible(!visible)}>
           {visible ? <X className="h-12 w-12" /> : <Menu className="h-12 w-12" />}
         </button>
 

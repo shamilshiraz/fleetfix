@@ -38,7 +38,9 @@ const resources = {
         fuel:'Fuel system parts',
         exhaust:'Exhaust system parts',
         steering:'Steering parts',
-        air:'Air and hydraulic system parts'
+        air:'Air and hydraulic system parts',
+        hydraulic:'Hydraulic parts',
+        mnl:'Mast and Lifting',
       },
       grid:{
         piston: "Pistons",
@@ -72,7 +74,19 @@ const resources = {
         bearing_wheels: "Bearings",
         more:'See more',
         less:'See less',
-        all:'All categories'
+        fork:'Fork',
+        liftchain:'Chain',
+        roller:'Roller',
+        all:'All categories',
+        hoses:'hoses',
+        hydpump: "Pumps"
+      },
+      ppara:{
+        forkpara:'Find all your forklift parts at FleetsFix! From clutches and hydraulic systems to brakes, filters, and batteries, we offer reliable, affordable solutions to keep your forklifts running efficiently. Save time and money with our wide selection of quality parts. Choose FleetsFix for smooth operations!',
+        truckpara:'Find all your truck parts at FleetsFix! From clutches and hydraulic systems to brakes, filters, and batteries, we provide durable and cost-effective solutions to keep your trucks running smoothly. Minimize downtime and maximize efficiency with our high-quality, reliable parts. Trust FleetsFix to keep your fleet on the road!',
+        back:'Back',
+        truck:'truck',
+        forklift:'forklift'
       },
       branches:{
         h1:'our',
@@ -142,7 +156,10 @@ const resources = {
         fuel: 'أجزاء نظام الوقود',
         exhaust: 'أجزاء نظام العادم',
         steering: 'أجزاء التوجيه',
-        air: 'أجزاء نظام الهواء والهيدروليك'
+        air: 'أجزاء نظام الهواء والهيدروليك',
+        hydraulic: "أجزاء الهيدروليك",
+mnl: "أجزاء السارية والرفع"
+
       },
       grid: {
         piston: "مكابس",
@@ -176,7 +193,12 @@ const resources = {
         bearing_wheels: "محامل العجلات",
         more: "عرض المزيد",
         less: "عرض أقل",
-        all:'جميع الفئات'
+        all:'جميع الفئات',
+        fork: "شوكة الرفع",
+        roller: "بكرة",
+        liftchain: "سلسلة الرفع",
+        hoses: "الخراطيم",
+        hydpump: "المضخات"
       },
       branches: {
         h1: 'فروعنا',
@@ -208,6 +230,16 @@ const resources = {
         ph: 'التواصل عبر الهاتف',
         ct: 'في FleetFix، نحن ملتزمون بالحفاظ على تشغيل أسطولك بسلاسة، لضمان استمرار عملك بخدمات الصيانة والإصلاح الموثوقة.'
       },
+      ppara: {
+        forkpara: "جميع قطع غيار الرافعات الشوكية تجدها في FleetsFix! نوفر لك القوابض، الأنظمة الهيدروليكية، أنظمة الفرامل، الفلاتر، البطاريات، والمزيد من الحلول الموثوقة وبأسعار تنافسية، للحفاظ على كفاءة وأداء رافعاتك الشوكية. وفر الوقت والمال مع مجموعتنا المتنوعة من قطع الغيار عالية الجودة. اختر FleetsFix لضمان تشغيل سلس ومستدام!",
+        
+        truckpara: "كل ما تحتاجه من قطع غيار الشاحنات متوفر لدى FleetsFix! من القوابض والأنظمة الهيدروليكية إلى الفرامل والفلاتر والبطاريات، نقدم لك حلولًا متينة وفعالة من حيث التكلفة للحفاظ على تشغيل شاحناتك بأفضل أداء. قلل من وقت التوقف وزد من الكفاءة مع قطع الغيار الموثوقة وعالية الجودة. FleetsFix هو شريكك للحفاظ على أسطولك على الطريق بثقة!",
+        
+        back: "رجوع",
+        truck: "شاحنة",
+        forklift: "رافعة شوكية"
+      },
+      
       footer: {
         text: "جميع الحقوق محفوظة لشركة Fleets Fix"
       }
