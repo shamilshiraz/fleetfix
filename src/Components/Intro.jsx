@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useScroll, useTransform, motion, useSpring, AnimatePresence } from 'framer-motion';
+import { t } from 'i18next';
 
 
 
-const words = ["trucks", "fleets", "forklifts"];
+const words = [t('mission.w1'), t('mission.w2'), t('mission.w3')];
 
 
 export default function Intro() {
@@ -40,7 +41,7 @@ export default function Intro() {
     }, [images.length]);
 
     return (
-        <div id='mission' className='h-screen overflow-hidden font-beb'>
+        <div id='mission' className='h-screen overflow-hidden '>
             <motion.div ref={container} style={{ y }} className='relative h-full'>
                 <motion.img
                     src={images[currentIndex]}
@@ -59,15 +60,15 @@ export default function Intro() {
                     <div className="flex flex-col items-center bg-opacity-50 p-10 mt-10">
 
                                 <p className="text-7xl sm:text-8xl font-bold text-white">
-                                    Fleets
-                                    <span className='text-red-600'> fix</span>
+                                    {t('mission.fleets')}
+                                    <span className='text-red-600'> {t('mission.fix')}
+                                    </span>
                                 </p>
                                 <p className="text-white text-md">
-      Your trusted partner for{" "}
+{t('mission.sp')}{" "}
       <span className="text-red-600 transition-opacity duration-500">
         {words[index]}
       </span>{" "}
-      spare parts
     </p>                    </div>
                 </div>
             </motion.div>

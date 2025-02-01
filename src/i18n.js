@@ -20,6 +20,12 @@ const resources = {
         para:"Fleets Fix, based in Saudi Arabia, is a trusted supplier of high-quality truck spare parts. We specialize in providing a comprehensive range of components for commercial vehicles, catering to the needs of businesses and fleet operators across the region. We source our products from reputable manufacturers to guarantee quality and performance. Whether you're looking for engine components, brake systems, suspension parts, or any other truck essentials, Fleets Fix is your one-stop destination."
       },
       mission: {
+        sp:'Your trusted spare parts partner for',
+        w1:'fleets',
+        w2:'trucks',
+        w3:' forklifts',
+        fleets:'fleets',
+        fix:'fix',
         h1: "Our",
         h2:'mission',
         para:'Our mission is to ensure your trucks stay operational and efficient with reliable and durable spare parts. Our knowledgeable team is always ready to assist you in finding the right parts to your requirements.'
@@ -138,9 +144,15 @@ const resources = {
         para: "Fleets Fix، إحدى الشركات الرائدة في المملكة العربية السعودية، متخصصة في توفير قطع غيار الشاحنات عالية الجودة. نحن نقدم مجموعة متنوعة من المكونات المصممة لتلبية احتياجات الشركات ومشغلي الأساطيل، مع ضمان الأداء والكفاءة. نحرص على استيراد منتجاتنا من أفضل الشركات المصنعة لضمان الجودة والمتانة. سواء كنت بحاجة إلى قطع غيار للمحرك، أنظمة الفرامل، أجزاء التعليق، أو أي مكونات أساسية أخرى، فإن Fleets Fix توفر لك الحل الأمثل للحفاظ على مركباتك في أفضل حالة تشغيل."
       },
       mission: {
+        fleets:'فليتس',
+        fix:'فيكس',
         h1: "",
         h2: 'مهمتنا',
-        para: "في Fleets Fix، نلتزم بالحفاظ على كفاءة شاحناتك وضمان استمرارها في العمل دون انقطاع، من خلال توفير قطع غيار موثوقة وعالية الجودة. فريقنا المتخصص دائمًا على أتم الاستعداد لمساعدتك في اختيار الأجزاء المناسبة التي تلبي احتياجاتك التشغيلية بكفاءة ودقة."
+        para: "في Fleets Fix، نلتزم بالحفاظ على كفاءة شاحناتك وضمان استمرارها في العمل دون انقطاع، من خلال توفير قطع غيار موثوقة وعالية الجودة. فريقنا المتخصص دائمًا على أتم الاستعداد لمساعدتك في اختيار الأجزاء المناسبة التي تلبي احتياجاتك التشغيلية بكفاءة ودقة.",
+        sp:'شريكك الموثوق لقطع غيار',
+        w1:'الشاحنات',
+        w2:'الأساطيل',
+        w3:'الرافعات الشوكية'
       },
       products: {
         h1: 'منتجاتنا',
