@@ -3,9 +3,9 @@ import { useScroll, useTransform, motion, useSpring, AnimatePresence } from 'fra
 
 export default function Intro() {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const images = ['./truck.webp', 'truck2.webp', 'forklift.webp'];
-    const text1 = ['Fleets', 'Spare'];
-    const text2 = ['fix', 'Parts'];
+    const images = ['./truck.webp', 'forklift.webp', 'truck2.webp'];
+    const text1 = ['Fleets', 'trucks','fork'];
+    const text2 = ['fix', 'parts','lifts'];
     const container = useRef();
     const { scrollYProgress } = useScroll({
         target: container,
@@ -21,7 +21,7 @@ export default function Intro() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 5000); // Change every 5 seconds to match the animation duration
+        }, 2000); // Change every 5 seconds to match the animation duration
 
         return () => clearInterval(interval); // Clear interval on component unmount
     }, [images.length]);
@@ -36,7 +36,7 @@ export default function Intro() {
                     transition={{
                         repeat: Infinity,
                         repeatType: 'loop',
-                        duration: 5, // Matches the interval duration
+                        duration: 2, // Matches the interval duration
                         ease: 'linear',
                     }}
                     alt="image"
