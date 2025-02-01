@@ -47,6 +47,7 @@ const resources = {
         air:'Air and hydraulic system parts',
         hydraulic:'Hydraulic parts',
         mnl:'Mast and Lifting',
+        all:'All products'
       },
       grid:{
         piston: "Pistons",
@@ -170,7 +171,9 @@ const resources = {
         steering: 'أجزاء التوجيه',
         air: 'أجزاء نظام الهواء والهيدروليك',
         hydraulic: "أجزاء الهيدروليك",
-mnl: "أجزاء السارية والرفع"
+mnl: "أجزاء السارية والرفع",
+all:"جميع المنتجات"
+
 
       },
       grid: {

@@ -16,7 +16,7 @@ function Display() {
         <ResponsiveCardSlider/>
       </div>
       <div className="">
-        <button className='border border-black p-3'><Link to={"/productspage"}>All products</Link></button>
+        <button className='border border-black p-3'><Link to={"/productspage"}>{t('products.all')}</Link></button>
       </div>
     </div>
   )
