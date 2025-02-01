@@ -1,22 +1,35 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useScroll, useTransform, motion, useSpring, AnimatePresence } from 'framer-motion';
 
+
+
+const words = ["trucks", "fleets", "forklifts"];
+
+
 export default function Intro() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const images = ['./truck.webp', 'forklift.webp', 'truck2.webp'];
-    const text1 = ['Fleets', 'trucks','fork'];
-    const text2 = ['fix', 'parts','lifts'];
     const container = useRef();
     const { scrollYProgress } = useScroll({
         target: container,
         offset: ['start start', 'end start'],
     });
-
+    
     const y = useSpring(useTransform(scrollYProgress, [0, 1], ["0vh", "110vh"]), {
         stiffness: 100,
         damping: 10,
         mass: 1,
     });
+
+    const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setIndex((prevIndex) => (prevIndex + 1) % words.length);
+      }, 2000); // Change word every 2 seconds
+  
+      return () => clearInterval(interval);
+    }, []);
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -32,7 +45,7 @@ export default function Intro() {
                 <motion.img
                     src={images[currentIndex]}
                     initial={{ scale: 1 }}
-                    animate={{ scale: [1, 1.5] }}
+                    animate={{ scale: [1, 1.3] }}
                     transition={{
                         repeat: Infinity,
                         repeatType: 'loop',
@@ -44,22 +57,18 @@ export default function Intro() {
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                     <div className="flex flex-col items-center bg-opacity-50 p-10 mt-10">
-                        <AnimatePresence mode="wait">
-                            <motion.div
-                                key={currentIndex}
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: -20 }}
-                                transition={{ duration: 0.5 }}
-                                className="m-3"
-                            >
+
                                 <p className="text-7xl sm:text-8xl font-bold text-white">
-                                    {text1[currentIndex % text1.length]}
-                                    <span className='text-red-600'> {text2[currentIndex % text2.length]}</span>
+                                    Fleets
+                                    <span className='text-red-600'> fix</span>
                                 </p>
-                            </motion.div>
-                        </AnimatePresence>
-                    </div>
+                                <p className="text-white text-md">
+      Your trusted partner for{" "}
+      <span className="text-red-600 transition-opacity duration-500">
+        {words[index]}
+      </span>{" "}
+      spare parts
+    </p>                    </div>
                 </div>
             </motion.div>
         </div>
