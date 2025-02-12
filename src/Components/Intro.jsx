@@ -2,77 +2,72 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useScroll, useTransform, motion, useSpring, AnimatePresence } from 'framer-motion';
 import { t } from 'i18next';
 
-
-
-const words = [t('mission.w1'), t('mission.w2'), t('mission.w3')];
-
-
 export default function Intro() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const images = ['./truck.webp', 'forklift.webp', 'truck2.webp'];
     const container = useRef();
+
+    // Improved scrolling smoothness
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ['start start', 'end start'],
-    });
-    
-    const y = useSpring(useTransform(scrollYProgress, [0, 1], ["0vh", "110vh"]), {
-        stiffness: 100,
-        damping: 10,
-        mass: 1,
+        offset: ['start start', 'end end'], // Smooth transition throughout the section
     });
 
-    const [index, setIndex] = useState(0);
+    const y = useSpring(useTransform(scrollYProgress, [0, 1], ["0vh", "30vh"]), {
+        stiffness: 60, // Lower stiffness for more fluid motion
+        damping: 20,   // Higher damping for a more controlled stop
+        mass: 0.8,     // Reduces jerky acceleration
+    });
 
     useEffect(() => {
-      const interval = setInterval(() => {
-        setIndex((prevIndex) => (prevIndex + 1) % words.length);
-      }, 2000); // Change word every 2 seconds
-  
-      return () => clearInterval(interval);
+        images.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
     }, []);
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 2000); // Change every 5 seconds to match the animation duration
+        }, 3000);
 
-        return () => clearInterval(interval); // Clear interval on component unmount
+        return () => clearInterval(interval);
     }, [images.length]);
 
     return (
-        <div id='mission' className='h-screen overflow-hidden '>
-            <motion.div ref={container} style={{ y }} className='relative h-full'>
-                <motion.img
-                    src={images[currentIndex]}
-                    initial={{ scale: 1 }}
-                    animate={{ scale: [1, 1.3] }}
-                    transition={{
-                        repeat: Infinity,
-                        repeatType: 'loop',
-                        duration: 2, // Matches the interval duration
-                        ease: 'linear',
-                    }}
-                    alt="image"
-                    className="absolute inset-0 h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                    <div className="flex flex-col items-center bg-opacity-50 p-10 mt-10">
+        <div id="mission" className="relative h-screen w-full overflow-hidden">
+            <motion.div ref={container} style={{ y }} className="absolute top-0 left-0 w-full h-full">
+                <AnimatePresence mode="popLayout">
+                    {images.map((src, index) => (
+                        index === currentIndex && (
+                            <motion.img
+                                key={src}
+                                src={src}
+                                initial={{ opacity: 0, scale: 1 }}
+                                animate={{ opacity: 1, scale: 1.2 }} // Slightly reduced scale for a smoother effect
+                                exit={{ opacity: 0 }}
+                                transition={{
+                                    opacity: { duration: 2, ease: 'easeInOut' }, 
+                                    scale: { duration: 4, ease: 'easeInOut' }, // Slower zoom for smoothness
+                                }}
+                                alt="image"
+                                className="absolute inset-0 h-full w-full object-cover"
+                            />
+                        )
+                    ))}
+                </AnimatePresence>
 
-                                <p className="text-7xl sm:text-8xl font-bold text-white">
-                                    {t('mission.fleets')}
-                                    <span className='text-red-600'> {t('mission.fix')}
-                                    </span>
-                                </p>
-                                <p className="text-white text-md">
-{t('mission.sp')}{" "}
-      <span className="text-red-600 transition-opacity duration-500">
-        {words[index]}
-      </span>{" "}
-    </p>                    </div>
+                {/* Text Content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                    <div className="flex flex-col items-center bg-opacity-50 p-10">
+                        <p className="text-7xl sm:text-8xl font-bold text-white">
+                            {t('mission.fleets')}
+                            <span className="text-red-600"> {t('mission.fix')}</span>
+                        </p>
+                        <p className="text-white text-md">{t('mission.sp')}</p>
+                    </div>
                 </div>
             </motion.div>
         </div>
     );
 }
-

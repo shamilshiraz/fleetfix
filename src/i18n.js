@@ -20,7 +20,7 @@ const resources = {
         para:"Fleets Fix, based in Saudi Arabia, is a trusted supplier of high-quality truck spare parts. We specialize in providing a comprehensive range of components for commercial vehicles, catering to the needs of businesses and fleet operators across the region. We source our products from reputable manufacturers to guarantee quality and performance. Whether you're looking for engine components, brake systems, suspension parts, or any other truck essentials, Fleets Fix is your one-stop destination."
       },
       mission: {
-        sp:'Your trusted spare parts partner for',
+        sp:'Your Trusted Partner in Professional After Sales Solution',
         w1:'fleets',
         w2:'trucks',
         w3:' forklifts',
@@ -99,12 +99,12 @@ const resources = {
         h1:'our',
         h2:'branches',
         para:'We currently have two branches, one in Dammam and another in Riyadh, both strategically positioned to serve our customers with exceptional convenience and service. Our Dammam branch caters to the Eastern Province, while the Riyadh branch provides top-notch service in the capital. At both locations, we are dedicated to delivering an outstanding customer experience.',
-        a1n:'Abdullah AL BUstoni',
-        a1s:'5189 as safa dist',
-        a1d:'jeddah',
-        a2n:'rail street',
-        a2s:'al bathaa, al aml dist',
-        a2d:'riyadh',
+        a1n:'3102 Abi Ibn Kaab road',
+        a1s:'Old Sana iyah',
+        a1d:'Riyadh',
+        a2n:'23453 Abdullah al bustani street',
+        a2s:'As safa dist',
+        a2d:'Jeddah',
       },
       contact:{
         h1:'contact',
@@ -142,7 +142,7 @@ const resources = {
       about: {
         ab: "من",
         us: "نحن",
-        para: "Fleets Fix، إحدى الشركات الرائدة في المملكة العربية السعودية، متخصصة في توفير قطع غيار الشاحنات عالية الجودة. نحن نقدم مجموعة متنوعة من المكونات المصممة لتلبية احتياجات الشركات ومشغلي الأساطيل، مع ضمان الأداء والكفاءة. نحرص على استيراد منتجاتنا من أفضل الشركات المصنعة لضمان الجودة والمتانة. سواء كنت بحاجة إلى قطع غيار للمحرك، أنظمة الفرامل، أجزاء التعليق، أو أي مكونات أساسية أخرى، فإن Fleets Fix توفر لك الحل الأمثل للحفاظ على مركباتك في أفضل حالة تشغيل."
+        para:'Fleets Fix هي شركة رائدة في السعودية متخصصة في قطع غيار الشاحنات عالية الجودة. نوفر مكونات متنوعة تلبي احتياجات الأساطيل، مع ضمان الأداء والكفاءة. نستورد منتجاتنا من أفضل الشركات لضمان الجودة والمتانة، مما يضمن الحفاظ على مركباتك في أفضل حالة تشغيل.',
       },
       mission: {
         fleets:'فليتس',
@@ -150,7 +150,7 @@ const resources = {
         h1: "",
         h2: 'مهمتنا',
         para: "في Fleets Fix، نلتزم بالحفاظ على كفاءة شاحناتك وضمان استمرارها في العمل دون انقطاع، من خلال توفير قطع غيار موثوقة وعالية الجودة. فريقنا المتخصص دائمًا على أتم الاستعداد لمساعدتك في اختيار الأجزاء المناسبة التي تلبي احتياجاتك التشغيلية بكفاءة ودقة.",
-        sp:'شريكك الموثوق لقطع غيار',
+        sp: "شريكك الموثوق في حلول ما بعد البيع الاحترافية",
         w1:'الشاحنات',
         w2:'الأساطيل',
         w3:'الرافعات الشوكية'
@@ -219,12 +219,12 @@ all:"جميع المنتجات"
         h1: 'فروعنا',
         h2:'',
         para: "نفخر بوجود فرعين رئيسيين لخدمتكم، أحدهما في الدمام والآخر في الرياض، وكلاهما يتمتع بموقع استراتيجي لضمان راحة العملاء وتقديم خدمات متميزة. يخدم فرع الدمام المنطقة الشرقية، بينما يوفر فرع الرياض حلولاً عالية الجودة في قلب العاصمة. في كل من مواقعنا، نلتزم بتقديم تجربة عملاء استثنائية تلبي جميع احتياجاتكم بكفاءة واحترافية.",
-        a1n: 'عبدالله البسطوني',
-        a1s: '5189 حي الصفا',
-        a1d: 'جدة',
-        a2n: 'شارع السكة الحديد',
-        a2s: 'البطحاء، حي الأمل',
-        a2d: 'الرياض'
+        a1n: "٣١٠٢ طريق أبي ابن كعب",
+        a1s: "الصناعية القديمة",
+        a1d: "الرياض",
+        a2n: "٢٣٤٥٣ شارع عبد الله البسطوني",
+        a2s: "حي الصفا",
+        a2d: "جدة"        
       },
       contact: {
         h1: 'اتصل',

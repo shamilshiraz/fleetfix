@@ -33,7 +33,7 @@ const PRODUCTS = [
   { id: 19, name: t('grid.alternator'), category: t('products.electrical'), image: './electric.webp' },
   { id: 20, name: t('grid.starter'), category: t('products.electrical'), image: './starter.webp' },
   { id: 21, name: t('grid.fuse'), category: t('products.electrical'), image: './fuse.webp' },
-  { id: 22, name: t('grid.bumper'), category: t('products.body'), image: '.t(bodyparts.webp' },
+  { id: 22, name: t('grid.bumper'), category: t('products.body'), image: './bumper.webp' },
   { id: 23, name: t('grid.fender'), category: t('products.body'), image: './fenders.webp' },
   { id: 24, name: t('grid.door'), category: t('products.body'), image: './doors.webp' },
   { id: 25, name: t('grid.mirror'), category: t('products.body'), image: './mirrors.webp' },
